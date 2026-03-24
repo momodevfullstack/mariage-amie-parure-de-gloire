@@ -1,0 +1,19 @@
+# Dependencies & build
+node_modules/
+dist/
+
+# Secrets — ne jamais committer (copier .env.example vers .env en local)
+.env
+.env.local
+.env.*.local
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
