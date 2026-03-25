@@ -156,7 +156,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-20">
               <h2 className="font-cursive text-4xl text-[#c4795a] mb-4 italic">Le Programme</h2>
-              <h3 className="font-serif text-5xl text-[#1e2a4a] uppercase tracking-tight">Le Dérxoulement</h3>
+              <h3 className="font-serif text-5xl text-[#1e2a4a] uppercase tracking-tight">Le Déroulement</h3>
               <div className="w-24 h-px bg-[#e85d2c]/40 mx-auto mt-8"></div>
             </div>
 
@@ -165,7 +165,7 @@ const App: React.FC = () => {
                 <div key={idx} className={`group flex flex-col items-center ${idx === 1 ? 'md:mt-12' : ''}`}>
                   <div className="relative overflow-hidden rounded-2xl aspect-[3/4] mb-6 w-full shadow-lg">
                     <img
-                      src={step.time === '09:30' ? 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600' : step.time === '11:00' ? 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=600' : 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=600'}
+                      src={step.image}
                       alt={step.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />

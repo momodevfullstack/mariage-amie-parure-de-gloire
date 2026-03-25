@@ -17,24 +17,34 @@ export const NAVIGATION = [
   { name: 'Admin', href: '#admin' },
 ];
 
-export const PROGRAM: { time: string; title: string; description: string; location: string; mapUrl?: string }[] = [
+export const PROGRAM: {
+  time: string;
+  title: string;
+  description: string;
+  location: string;
+  image: string;
+  mapUrl?: string;
+}[] = [
   {
     time: '09:30',
     title: 'Mairie',
     description: 'Mairie: Annexe Djorogobite.',
     location: 'Christ Embassy Faya',
+    image: '/assets/mairie.png',
   },
   {
     time: '11:00',
     title: 'Église',
     description: 'Suite de la célébration à Christ Embassy Faya.',
     location: 'Christ Embassy Faya',
+    image: '/assets/eglise.png',
   },
   {
     time: '13:00',
     title: 'Réception',
     description: 'Célébration festive à Espace Le Joyaux.',
     location: 'Espace Le Joyaux, Derrière la pharmacie Ste Clémentine',
+    image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=600',
   },
 ];
 
