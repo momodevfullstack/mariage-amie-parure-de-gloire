@@ -250,7 +250,7 @@ const App: React.FC = () => {
                     Mairie: Annexe Djorogobite 
                   </p>
                   <p className="text-[#5c6b7a] text-sm tracking-wide">
-                    Église: Christ Embassy Faya • Réception: Espace Le Joyaux, Derrière la pharmacie Ste Clémentine
+                    Église: Christ Embassy Faya 
                   </p>
                   <p className="text-[#5c6b7a] text-sm tracking-wide">
                     Réception: Espace Le Joyaux, Derrière la pharmacie Ste Clémentine
