@@ -156,7 +156,7 @@ const App: React.FC = () => {
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-20">
               <h2 className="font-cursive text-4xl text-[#c4795a] mb-4 italic">Le Programme</h2>
-              <h3 className="font-serif text-5xl text-[#1e2a4a] uppercase tracking-tight">Le Déroulement</h3>
+              <h3 className="font-serif text-5xl text-[#1e2a4a] uppercase tracking-tight">Le Dérxoulement</h3>
               <div className="w-24 h-px bg-[#e85d2c]/40 mx-auto mt-8"></div>
             </div>
 
@@ -247,7 +247,13 @@ const App: React.FC = () => {
                 <div className="flex items-center space-x-4">
                   <span className="w-10 h-10 rounded-full bg-[#f0ebe5] flex items-center justify-center text-[#e85d2c]">📍</span>
                   <p className="text-[#5c6b7a] text-sm tracking-wide">
-                    Mairie: Annexe Djorogobite • Église: Christ Embassy Faya • Réception: Espace Le Joyaux, Derrière la pharmacie Ste Clémentine
+                    Mairie: Annexe Djorogobite 
+                  </p>
+                  <p className="text-[#5c6b7a] text-sm tracking-wide">
+                    Église: Christ Embassy Faya • Réception: Espace Le Joyaux, Derrière la pharmacie Ste Clémentine
+                  </p>
+                  <p className="text-[#5c6b7a] text-sm tracking-wide">
+                    Réception: Espace Le Joyaux, Derrière la pharmacie Ste Clémentine
                   </p>
                 </div>
                 <div className="flex items-center space-x-4">

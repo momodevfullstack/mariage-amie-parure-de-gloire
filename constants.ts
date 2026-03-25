@@ -20,8 +20,8 @@ export const NAVIGATION = [
 export const PROGRAM: { time: string; title: string; description: string; location: string; mapUrl?: string }[] = [
   {
     time: '09:30',
-    title: 'Église',
-    description: 'Premier temps à Christ Embassy Faya.',
+    title: 'Mairie',
+    description: 'Mairie: Annexe Djorogobite.',
     location: 'Christ Embassy Faya',
   },
   {
