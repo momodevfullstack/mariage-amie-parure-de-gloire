@@ -244,17 +244,13 @@ const App: React.FC = () => {
             <div className="flex flex-col justify-center space-y-8">
               <h2 className="font-serif text-4xl text-[#1e2a4a] uppercase tracking-tighter">Où Nous Retrouver</h2>
               <div className="space-y-6 font-sans">
-                <div className="flex items-center space-x-4">
-                  <span className="w-10 h-10 rounded-full bg-[#f0ebe5] flex items-center justify-center text-[#e85d2c]">📍</span>
-                  <p className="text-[#5c6b7a] text-sm tracking-wide">
-                    Mairie: Annexe Djorogobite 
-                  </p>
-                  <p className="text-[#5c6b7a] text-sm tracking-wide">
-                    Église: Christ Embassy Faya 
-                  </p>
-                  <p className="text-[#5c6b7a] text-sm tracking-wide">
-                    Réception: Espace Le Joyaux, Derrière la pharmacie Ste Clémentine
-                  </p>
+                <div className="flex items-start gap-3">
+                  <span className="w-10 h-10 shrink-0 rounded-full bg-[#f0ebe5] flex items-center justify-center text-[#e85d2c]">📍</span>
+                  <div className="flex flex-col gap-2 text-[#5c6b7a] text-sm tracking-wide pt-1.5">
+                    <p>Mairie : Annexe Djorogobite</p>
+                    <p>Église : Christ Embassy Faya</p>
+                    <p>Réception : Espace Le Joyaux, derrière la pharmacie Ste Clémentine</p>
+                  </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="w-10 h-10 rounded-full bg-[#f0ebe5] flex items-center justify-center text-[#e85d2c]">📞</span>
