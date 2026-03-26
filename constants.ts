@@ -1,4 +1,6 @@
 import { WeddingInfo } from './types';
+import mairieImageUrl from './assets/mairie.png?url';
+import egliseImageUrl from './assets/eglise.png?url';
 
 export const WEDDING_DATA: WeddingInfo = {
   groom: 'Romaric',
@@ -30,14 +32,14 @@ export const PROGRAM: {
     title: 'Mairie',
     description: 'Mairie: Annexe Djorogobite.',
     location: 'Christ Embassy Faya',
-    image: '/assets/mairie.png',
+    image: mairieImageUrl,
   },
   {
     time: '11:00',
     title: 'Église',
     description: 'Suite de la célébration à Christ Embassy Faya.',
     location: 'Christ Embassy Faya',
-    image: '/assets/eglise.png',
+    image: egliseImageUrl,
   },
   {
     time: '13:00',
