@@ -30,7 +30,7 @@ export const PROGRAM: {
     title: 'Mairie',
     description: 'Mairie: Annexe Djorogobite.',
     location: 'Christ Embassy Faya',
-    image: '/assets/mairie.png',
+    image: '/assets/mairie1.png',
   },
   {
     time: '11:00',
