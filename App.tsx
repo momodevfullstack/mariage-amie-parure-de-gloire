@@ -6,7 +6,7 @@ import { AdminPanel } from './components/AdminPanel';
 import { LoginModal } from './components/LoginModal';
 import { WhatsAppFloat } from './components/WhatsAppFloat';
 import { authAPI } from './services/supabase';
-import { PROGRAM } from './constants';
+import { PROGRAM, SITE_LOGO_URL } from './constants';
 
 const DecorativePetals = () => {
   const petals = Array.from({ length: 12 });
@@ -68,9 +68,10 @@ const App: React.FC = () => {
     return (
       <div className="min-h-screen bg-[#f8f4f0] font-sans">
         <nav className="bg-white border-b border-[#e5e0db] py-4 px-8 flex justify-between items-center sticky top-0 z-50 shadow-sm">
-          <div className="flex items-center space-x-2">
-            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-            <span className="font-serif italic text-xl text-[#1e2a4a] font-bold">R&L Admin</span>
+          <div className="flex items-center gap-3">
+            <img src={SITE_LOGO_URL} alt="" className="h-10 w-auto object-contain opacity-90" aria-hidden />
+            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse shrink-0" title="Session active" />
+            <span className="font-serif italic text-xl text-[#1e2a4a] font-bold">Admin</span>
           </div>
           <button
             onClick={() => {
@@ -163,11 +164,21 @@ const App: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-12">
               {PROGRAM.map((step, idx) => (
                 <div key={idx} className={`group flex flex-col items-center ${idx === 1 ? 'md:mt-12' : ''}`}>
-                  <div className="relative overflow-hidden rounded-2xl aspect-[3/4] mb-6 w-full shadow-lg">
+                  <div
+                    className={
+                      step.venuePhoto
+                        ? 'relative overflow-hidden rounded-2xl aspect-[4/3] mb-6 w-full shadow-lg bg-[#e0dbd4] ring-1 ring-[#d0cac0]/80'
+                        : 'relative overflow-hidden rounded-2xl aspect-[3/4] mb-6 w-full shadow-lg'
+                    }
+                  >
                     <img
                       src={step.image}
                       alt={step.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className={
+                        step.venuePhoto
+                          ? 'w-full h-full object-contain object-center p-2 sm:p-3 transition-transform duration-700 group-hover:scale-[1.02]'
+                          : 'w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
+                      }
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold tracking-widest uppercase font-sans">

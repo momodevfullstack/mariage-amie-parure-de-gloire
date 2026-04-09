@@ -7,7 +7,6 @@ export const RSVPForm: React.FC = () => {
     name: '',
     email: '',
     status: 'confirmed' as 'confirmed' | 'declined',
-    plusOne: false,
     relation: '' as '' | 'Collaborateur' | 'Ami' | 'Connaissance' | 'Famille' | 'Patron' | 'Collègue' | 'Pasteur' | 'Frere/soeur eglise',
     message: '',
   });
@@ -21,7 +20,7 @@ export const RSVPForm: React.FC = () => {
     setIsSubmitting(true);
     setError(null);
     try {
-      const response = await guestAPI.create(formData);
+      const response = await guestAPI.create({ ...formData, plusOne: false });
       setGuestData(response.data);
       setSubmitted(true);
     } catch (err: any) {
@@ -109,37 +108,26 @@ export const RSVPForm: React.FC = () => {
             </select>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="flex gap-8">
-              <label className="flex items-center gap-3 cursor-pointer">
-                <input
-                  type="radio"
-                  name="status"
-                  checked={formData.status === 'confirmed'}
-                  onChange={() => setFormData({ ...formData, status: 'confirmed' })}
-                  className="w-4 h-4 accent-[#1e2a4a]"
-                />
-                <span className="text-[11px] uppercase tracking-widest text-[#5c6b7a]">Présent(e)</span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer">
-                <input
-                  type="radio"
-                  name="status"
-                  checked={formData.status === 'declined'}
-                  onChange={() => setFormData({ ...formData, status: 'declined' })}
-                  className="w-4 h-4 accent-[#1e2a4a]"
-                />
-                <span className="text-[11px] uppercase tracking-widest text-[#5c6b7a]">Absent(e)</span>
-              </label>
-            </div>
-            <label className="flex items-center gap-4 cursor-pointer">
+          <div className="flex flex-wrap gap-8">
+            <label className="flex items-center gap-3 cursor-pointer">
               <input
-                type="checkbox"
-                checked={formData.plusOne}
-                onChange={(e) => setFormData({ ...formData, plusOne: e.target.checked })}
+                type="radio"
+                name="status"
+                checked={formData.status === 'confirmed'}
+                onChange={() => setFormData({ ...formData, status: 'confirmed' })}
                 className="w-4 h-4 accent-[#1e2a4a]"
               />
-              <span className="text-[11px] uppercase tracking-widest text-[#5c6b7a]">Accompagné(e) (+1)</span>
+              <span className="text-[11px] uppercase tracking-widest text-[#5c6b7a]">Présent(e)</span>
+            </label>
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input
+                type="radio"
+                name="status"
+                checked={formData.status === 'declined'}
+                onChange={() => setFormData({ ...formData, status: 'declined' })}
+                className="w-4 h-4 accent-[#1e2a4a]"
+              />
+              <span className="text-[11px] uppercase tracking-widest text-[#5c6b7a]">Absent(e)</span>
             </label>
           </div>
 

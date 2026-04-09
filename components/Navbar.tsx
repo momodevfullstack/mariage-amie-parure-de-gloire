@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NAVIGATION } from '../constants';
+import { NAVIGATION, SITE_LOGO_URL } from '../constants';
 
 interface NavbarProps {
   onAdminClick: () => void;
@@ -12,10 +12,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onAdminClick }) => {
     <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-[#ebe5df]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex-shrink-0">
-            <span className="font-serif italic text-2xl text-[#1e2a4a] tracking-tighter uppercase font-bold text-[#e85d2c]">
-              R & L
-            </span>
+          <div className="flex-shrink-0 flex items-center">
+            <a href="#home" className="block">
+              <img
+                src={SITE_LOGO_URL}
+                alt="Romaric & Leocadie — Parure de gloire"
+                className="h-14 sm:h-16 w-auto max-w-[200px] sm:max-w-[240px] object-contain object-left"
+              />
+            </a>
           </div>
 
           <div className="hidden md:block">

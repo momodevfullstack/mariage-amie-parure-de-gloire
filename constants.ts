@@ -1,6 +1,10 @@
 import { WeddingInfo } from './types';
-import mairieImageUrl from './assets/mairie.png?url';
-import egliseImageUrl from './assets/eglise.png?url';
+import siteLogoUrl from './assets/logo.jpeg?url';
+import mairieImageUrl from './assets/mairie.jpeg?url';
+import egliseImageUrl from './assets/eglise.jpeg?url';
+
+/** Logo affiché dans la barre de navigation (chemin résolu au build). */
+export const SITE_LOGO_URL = siteLogoUrl;
 
 export const WEDDING_DATA: WeddingInfo = {
   groom: 'Romaric',
@@ -25,6 +29,8 @@ export const PROGRAM: {
   description: string;
   location: string;
   image: string;
+  /** Photos de lieu : cadre plus large, image entière visible (pas de zoom-recadrage agressif). */
+  venuePhoto?: boolean;
   mapUrl?: string;
 }[] = [
   {
@@ -33,6 +39,7 @@ export const PROGRAM: {
     description: 'Mairie: Annexe Djorogobite.',
     location: 'Christ Embassy Faya',
     image: mairieImageUrl,
+    venuePhoto: true,
   },
   {
     time: '11:00',
@@ -40,6 +47,7 @@ export const PROGRAM: {
     description: 'Suite de la célébration à Christ Embassy Faya.',
     location: 'Christ Embassy Faya',
     image: egliseImageUrl,
+    venuePhoto: true,
   },
   {
     time: '13:00',
@@ -47,6 +55,7 @@ export const PROGRAM: {
     description: 'Célébration festive à Espace Le Joyaux.',
     location: 'Espace Le Joyaux, Derrière la pharmacie Ste Clémentine',
     image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=600',
+    venuePhoto: true,
   },
 ];
 
